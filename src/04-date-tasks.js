@@ -119,8 +119,6 @@ function angleBetweenClockHands(date) {
   return (item * 2 * Math.PI) / 360;
 }
 
-console.log(angleBetweenClockHands(Date.UTC(2016, 3, 5, 0, 0)));
-
 module.exports = {
   parseDataFromRfc2822,
   parseDataFromIso8601,
