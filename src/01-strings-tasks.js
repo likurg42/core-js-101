@@ -92,8 +92,8 @@ function getFirstChar(value) {
  *   'cat'              => 'cat'
  *   '\tHello, World! ' => 'Hello, World!'
  */
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingAndTrailingWhitespaces(value) {
+  return value.trim().replaceAll('/\t|\n/', '');
 }
 
 /**
@@ -213,7 +213,9 @@ function getRectangleString(width, height) {
     result.push(`${verticalLine}${' '.repeat(width - 2)}${verticalLine}\n`);
   }
 
-  result.push(`${bottomRight}${width - 2 === 0 ? '' : horizontalLine.repeat(width - 2)}${bottomLeft}\n`);
+  result.push(
+    `${bottomRight}${width - 2 === 0 ? '' : horizontalLine.repeat(width - 2)}${bottomLeft}\n`,
+  );
 
   return result.join('');
 }
